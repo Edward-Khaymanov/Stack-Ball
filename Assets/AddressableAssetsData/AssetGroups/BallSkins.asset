@@ -1,0 +1,44 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: BallSkins
+  m_EditorClassIdentifier: 
+  m_GroupName: BallSkins
+  m_Data:
+    m_SerializedData: []
+  m_GUID: 6fa86051ba4fd814da120802fc771815
+  m_SerializeEntries:
+  - m_GUID: 0286aec2e926dd74ba9cd2b0bd709033
+    m_Address: Cube
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - BallSkin
+  - m_GUID: 862c200f0f58f8e4f9c0b4156f4b3b7c
+    m_Address: Cylinder
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - BallSkin
+  - m_GUID: eb2c594e5f7e2bc4e8a4bf4de125486c
+    m_Address: DefaultSkin
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - BallSkin
+  - m_GUID: 09cdb2a6506da184baa4a381c6d72413
+    m_Address: Capsule
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - BallSkin
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: b266935f8d5465b4cbaadccbae3dcf88, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: eb0da75cde85a5142ada83114df64401, type: 2}

@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Platforms
+  m_EditorClassIdentifier: 
+  m_GroupName: Platforms
+  m_Data:
+    m_SerializedData: []
+  m_GUID: 20b5a3407f9bd464bad80fab9de7a993
+  m_SerializeEntries:
+  - m_GUID: 64c62ebc27e1bc241b9c47f630d294f3
+    m_Address: SurfaceInstancing
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: d3a42e4680303944395a00eec7c1cc38
+    m_Address: Platform
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: f2625e7f978e32c40becda7e854d7758
+    m_Address: CirclePlatform
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - PlatfromTemplate
+  - m_GUID: afc3bf75f976cc541bf5029028ac65eb
+    m_Address: plat 2
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - PlatfromTemplate
+  - m_GUID: 2decf59180ec31f40a14685536f2272e
+    m_Address: plat 3
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - PlatfromTemplate
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: b266935f8d5465b4cbaadccbae3dcf88, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: bf32a31b60e8f624d92f71294c13bb41, type: 2}

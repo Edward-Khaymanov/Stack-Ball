@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: ColorPalettes
+  m_EditorClassIdentifier: 
+  m_GroupName: ColorPalettes
+  m_Data:
+    m_SerializedData: []
+  m_GUID: 8e115682d6eb0d94082da1b88092a1f7
+  m_SerializeEntries:
+  - m_GUID: efef9f4928cfbd346998dd495430a66c
+    m_Address: 2
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ColorPalette
+  - m_GUID: 03df18db93853184e898757b3e67906a
+    m_Address: 1
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ColorPalette
+  - m_GUID: 6ed85ba836a070d4291fcbe44eb1c3d4
+    m_Address: 3
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ColorPalette
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: b266935f8d5465b4cbaadccbae3dcf88, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: fc91c9473e6896f4c9dd3fb49285e574, type: 2}
