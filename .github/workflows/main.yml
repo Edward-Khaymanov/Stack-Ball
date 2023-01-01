@@ -1,30 +1,50 @@
 name: Build project
 
-on: [push]
+on: [workflow_dispatch]
 
 jobs:
-  buildForAllSupportedPlatforms:
-    name: Build for ${{ matrix.targetPlatform }}
-    runs-on: ubuntu-latest
-    strategy:
-      fail-fast: false
-      matrix:
-        targetPlatform:
-          - Android # Build an Android .apk standalone app.
-    steps:
-    
-      - uses: actions/checkout@v2
-        with:
-          fetch-depth: 0
-          lfs: true
-          
-      - uses: game-ci/unity-builder@v2
-        env:
-          UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
-        with:
-          targetPlatform: ${{ matrix.targetPlatform }}
-          
-      - uses: actions/upload-artifact@v2
-        with:
-          name: Build-${{ matrix.targetPlatform }}
-          path: build/${{ matrix.targetPlatform }}
+    test:
+        name: Test
+        runs-on: ubuntu-latest
+        strategy:
+            fail-fast: false
+            matrix:
+                targetPlatform:
+                    - Android
+
+        steps:
+            - name: Checkout code
+            uses: actions/checkout@v2
+            with:
+                fetch-depth: 0
+
+            - name: Restore Library cache
+            uses: actions/cache@v2
+            with:
+                path: Library
+                key: Library-${{ matrix.targetPlatform }}
+                restore-keys: Library-
+
+    build:
+        needs: test
+        name: Build for ${{ matrix.targetPlatform }}
+        runs-on: ubuntu-latest
+        strategy:
+            fail-fast: false
+            matrix:
+                targetPlatform:
+                    - Android
+
+        steps:
+            - name: Build
+            uses: game-ci/unity-builder@v2
+            env:
+                UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
+            with:
+                targetPlatform: ${{ matrix.targetPlatform }}
+
+            - name: Upload build file
+            uses: actions/upload-artifact@v2
+            with:
+                name: Build-${{ matrix.targetPlatform }}
+                path: build/${{ matrix.targetPlatform }}
