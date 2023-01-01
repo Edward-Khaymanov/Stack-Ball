@@ -19,7 +19,7 @@ jobs:
                 fetch-depth: 0
 
     build:
-        needs: test
+        needs: Test
         name: Build for ${{ matrix.targetPlatform }}
         runs-on: ubuntu-latest
         strategy:
