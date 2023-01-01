@@ -28,14 +28,7 @@ jobs:
                 targetPlatform:
                     - Android
 
-        steps:
-          - name: Restore Library cache
-            uses: actions/cache@v2
-            with:
-                path: Library
-                key: Library-${{ matrix.targetPlatform }}
-                restore-keys: Library-
-                
+        steps:               
           - name: Build
             uses: game-ci/unity-builder@v2
             env:
