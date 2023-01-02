@@ -58,14 +58,13 @@ public class BallMover : MonoBehaviour
 
     private IEnumerator MoveCoroutine()
     {
-        var wait = new WaitForFixedUpdate();
-        yield return wait;
+        yield return null;
         _body.velocity = Vector3.zero;
 
         while (true)
         {
-            transform.Translate(Vector3.down * _moveSpeed * Time.fixedDeltaTime);
-            yield return wait;
+            transform.Translate(Vector3.down * _moveSpeed * Time.deltaTime);
+            yield return null;
         }
     }
 }
