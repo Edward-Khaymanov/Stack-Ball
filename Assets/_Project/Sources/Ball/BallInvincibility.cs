@@ -1,5 +1,4 @@
 using System;
-using System.Collections.Generic;
 using UnityEngine;
 using Zenject;
 
@@ -10,7 +9,7 @@ public class BallInvincibility : MonoBehaviour
     [SerializeField] private int _platformsToEnableIndicator = 10;
     [SerializeField] private int _secondsToEnableInvincible = 4;
 
-    private BallInput _input;
+    private Input _input;
     private BallInvincibilityIndicator _indicator;
     private Timer _timer;
     private int _currentDestroyedPlatform;
@@ -21,7 +20,7 @@ public class BallInvincibility : MonoBehaviour
     public bool IsInvincible { get; private set; }
 
     [Inject]
-    private void Constructor(BallInput input, BallInvincibilityIndicator indicator)
+    private void Constructor(Input input, BallInvincibilityIndicator indicator)
     {
         _input = input;
         _indicator = indicator;

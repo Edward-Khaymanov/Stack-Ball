@@ -1,40 +1,34 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using System.IO;
-using System.Threading;
-using System.Threading.Tasks;
 using UnityEngine;
-using UnityEngine.AddressableAssets;
-using UnityEngine.ResourceManagement.ResourceLocations;
 
 [Serializable]
 public class Level
 {
     [SerializeField] private int _number = 1;
-    [SerializeField] private string _platformReferenceKey;
     [SerializeField] private string _colorPaletteReferenceKey;
+    [SerializeField] private string _platformReferenceKey;
 
     private static Level _instance;
 
-    private Platform _platform;
     private LevelColorPalette _colorPalette;
+    private Platform _platform;
 
-    public Level(int number, string platformReferenceKey, string colorPaletteReferenceKey)
+    public Level(int number, string colorPaletteReferenceKey, string platformReferenceKey)
     {
-        Validate(number, platformReferenceKey, colorPaletteReferenceKey);
+        Validate(number, colorPaletteReferenceKey, platformReferenceKey);
 
         _number = number;
-        _platformReferenceKey = platformReferenceKey;
         _colorPaletteReferenceKey = colorPaletteReferenceKey;
+        _platformReferenceKey = platformReferenceKey;
     }
 
     public static Level Current => _instance;
     private static string SavePath => Path.Combine(Application.persistentDataPath, "level.json");
 
     public int Number => _number;
-    public Platform Platform => _platform;
     public LevelColorPalette ColorPalette => _colorPalette;
+    public Platform Platform => _platform;
 
     public static void InitSingleton(Level instance)
     {
@@ -65,15 +59,15 @@ public class Level
         _colorPalette = LevelProvider.Instance.LoadPalette(_colorPaletteReferenceKey);
     }
 
-    private void Validate(int number, string platformReferenceKey, string colorPaletteReferenceKey)
+    private void Validate(int number, string colorPaletteReferenceKey, string platformReferenceKey)
     {
         if (number < 1)
             throw new ArgumentOutOfRangeException(nameof(number));
 
-        if (string.IsNullOrEmpty(platformReferenceKey))
-            throw new ArgumentException(nameof(platformReferenceKey));
-
         if (string.IsNullOrEmpty(colorPaletteReferenceKey))
             throw new ArgumentException(nameof(colorPaletteReferenceKey));
+
+        if (string.IsNullOrEmpty(platformReferenceKey))
+            throw new ArgumentException(nameof(platformReferenceKey));
     }
 }

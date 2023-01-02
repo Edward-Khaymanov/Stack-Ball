@@ -1,14 +1,11 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
-using Zenject;
 
 public class SkyboxView : MonoBehaviour
 {
-    private Material _material;
     private const string BOTTOM_COLOR = "_BottomColor";
     private const string TOP_COLOR = "_TopColor";
+
+    private Material _material;
 
     private void Awake()
     {

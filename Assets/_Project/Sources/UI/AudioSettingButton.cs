@@ -1,10 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Audio;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
-using Zenject;
 
 public class AudioSettingButton : MonoBehaviour, IPointerDownHandler
 {

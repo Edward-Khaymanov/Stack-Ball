@@ -1,15 +1,13 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Zenject;
 
 public class PlatformGenerator : MonoBehaviour
 {
-    [SerializeField] private float _offsetHeight = 0.4f;
     [SerializeField] private float _offestAngle = 2;
+    [SerializeField] private float _offsetHeight = 0.4f;
     [SerializeField] private int _count = 140;
-    [SerializeField] private int _minSamePlatformsCount = 5;
     [SerializeField] private int _maxSamePlatformsCount = 40;
+    [SerializeField] private int _minSamePlatformsCount = 5;
 
     private const int PLATFORM_SAFE_PARTS = 2;
     private Transform _platformsContainer;
@@ -68,7 +66,7 @@ public class PlatformGenerator : MonoBehaviour
             {
                 var platform = platforms.Dequeue();
                 platform.Init(platformsColors.Evaluate(gradientTime), samePlatformsDangerPartsCount);
-                gradientTime =  i / platformsCount;
+                gradientTime = i / platformsCount;
             }
         }
     }

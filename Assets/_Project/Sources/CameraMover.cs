@@ -1,26 +1,24 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using Zenject;
 
 public class CameraMover : MonoBehaviour
 {
-    [SerializeField, Range(0f, 1f)] private float _trackDelay = 0.25f;
     [SerializeField] private Vector3 _trackOffset = new Vector3(0, 3, -8.3f);
     [SerializeField] private Vector3 _startOffset = new Vector3(0, 1.5f, -8.3f);
+    [SerializeField, Range(0f, 1f)] private float _trackDelay = 0.25f;
 
-    private float _minTrackHeight;
+    private Input _input;
+    private Transform _target;
     private Vector3 _velocity;
     private Vector3 _targetPosition;
     private Vector3 _startPosition;
-    private Transform _target;
-    private BallInput _input;
+    private float _minTrackHeight;
 
     [Inject]
     private void Constructor(
-        BallInput input, 
-        Ball target, 
-        [Inject(Id = DIMarkers.CAMERA_MIN_HEIGHT)] float minTrackHeight, 
+        Input input,
+        Ball target,
+        [Inject(Id = DIMarkers.CAMERA_MIN_HEIGHT)] float minTrackHeight,
         [Inject(Id = DIMarkers.BALL_START_POINT)] Transform targetStartPoint)
     {
         _input = input;
@@ -39,10 +37,10 @@ public class CameraMover : MonoBehaviour
 
         transform.position = Vector3.SmoothDamp(
             transform.position,
-            _targetPosition, 
-            ref _velocity, 
-            _trackDelay, 
-            Mathf.Infinity, 
+            _targetPosition,
+            ref _velocity,
+            _trackDelay,
+            Mathf.Infinity,
             Time.smoothDeltaTime);
     }
 

@@ -1,18 +1,16 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using Zenject;
 
 public class MainMenu : MonoBehaviour
 {
-    private BallInput _ballInput;
     private Canvas _canvas;
+    private Input _input;
     private bool _isFirstTouch = true;
 
     [Inject]
-    private void Constructor(BallInput ballInput)
+    private void Constructor(Input input)
     {
-        _ballInput = ballInput;
+        _input = input;
     }
 
     private void Awake()
@@ -23,13 +21,13 @@ public class MainMenu : MonoBehaviour
     private void OnEnable()
     {
         EventsHolder.LevelStarted += Show;
-        _ballInput.Pressed += TryHide;
+        _input.Pressed += TryHide;
     }
 
     private void OnDisable()
     {
         EventsHolder.LevelStarted -= Show;
-        _ballInput.Pressed -= TryHide;
+        _input.Pressed -= TryHide;
     }
 
     private void Show()

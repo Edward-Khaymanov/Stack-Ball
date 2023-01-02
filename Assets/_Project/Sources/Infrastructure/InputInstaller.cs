@@ -3,12 +3,12 @@ using Zenject;
 
 public class InputInstaller : MonoInstaller
 {
-    [SerializeField] private BallInput _input;
+    [SerializeField] private Input _input;
 
     public override void InstallBindings()
     {
         Container
-            .Bind<BallInput>()
+            .Bind<Input>()
             .FromInstance(_input)
             .AsSingle();
     }

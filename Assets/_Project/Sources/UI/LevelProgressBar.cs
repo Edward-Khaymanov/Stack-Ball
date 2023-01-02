@@ -1,9 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 using TMPro;
+using UnityEngine;
 using UnityEngine.UI;
-using Zenject;
 
 public class LevelProgressBar : MonoBehaviour
 {
@@ -27,7 +24,7 @@ public class LevelProgressBar : MonoBehaviour
     public void Fill(int platformsAmount)
     {
         _currentBrokenPlatforms++;
-        var progress = (float) _currentBrokenPlatforms / platformsAmount;
+        var progress = (float)_currentBrokenPlatforms / platformsAmount;
         _filler.fillAmount = Mathf.Clamp01(progress);
     }
 

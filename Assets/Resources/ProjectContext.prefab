@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 5560095941031982190}
   - component: {fileID: 6661242230366519464}
-  - component: {fileID: 3189924609941623568}
   m_Layer: 0
   m_Name: ProjectContext
   m_TagString: Untagged
@@ -46,8 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _scriptableObjectInstallers: []
-  _monoInstallers:
-  - {fileID: 3189924609941623568}
+  _monoInstallers: []
   _installerPrefabs: []
   _parentNewObjectsUnderContext: 1
   _editorReflectionBakingCoverageMode: 0
@@ -62,25 +60,3 @@ MonoBehaviour:
       _missingHandlerDefaultResponse: 2
       _requireStrictUnsubscribe: 0
       _defaultAsyncTickPriority: 1
---- !u!114 &3189924609941623568
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5617525743241805436}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70610c1a6d792f64ab56b763cd162cb5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _levelColorPaletteLabel:
-    m_LabelString: ColorPalette
-  _platformTemplatesLabel:
-    m_LabelString: PlatfromTemplate
-  _defaultSkinRefferenceKey2:
-    m_AssetGUID: eb2c594e5f7e2bc4e8a4bf4de125486c
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
-  _defaultSkinRefferenceKey: DefaultSkin

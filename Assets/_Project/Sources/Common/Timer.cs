@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Timer
 {
-    private MonoBehaviour _invoker;
+    private readonly MonoBehaviour _invoker;
     private IEnumerator _timer;
     private float _remainingSeconds;
 

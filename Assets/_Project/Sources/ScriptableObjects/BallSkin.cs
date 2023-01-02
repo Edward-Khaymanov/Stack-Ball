@@ -1,8 +1,4 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.AddressableAssets;
 
 [CreateAssetMenu(fileName = "New BallSkin", menuName = "Ball Skin", order = 52)]
 public class BallSkin : ScriptableObject

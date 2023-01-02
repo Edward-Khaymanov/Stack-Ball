@@ -1,7 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using System;
 
 [CreateAssetMenu(fileName = "New ColorPalette", menuName = "Color Palette", order = 51)]
 public class LevelColorPalette : ScriptableObject

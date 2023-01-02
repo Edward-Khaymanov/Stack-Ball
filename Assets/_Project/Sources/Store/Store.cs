@@ -1,10 +1,8 @@
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
 using UnityEngine.UI;
-using Zenject;
 
 public class Store : Screen
 {
@@ -14,7 +12,7 @@ public class Store : Screen
     [SerializeField] private StoreItem _storeItemTemplate;
     [SerializeField] private Transform _container;
 
-    private List<StoreItem> _storeItems = new List<StoreItem>();
+    private readonly List<StoreItem> _storeItems = new List<StoreItem>();
 
     private void Start()
     {
@@ -38,7 +36,7 @@ public class Store : Screen
         var player = Player.Current;
         var provider = new BallSkinProvider();
         var skinLocations = provider.GetLocationsByLabel(_ballSkinsLabel);
-        var skinsWithKey = provider.GetKeySkins(skinLocations).OrderBy(x=>x.Value.StoreOrder);
+        var skinsWithKey = provider.GetKeySkins(skinLocations).OrderBy(x => x.Value.StoreOrder);
 
         foreach (var skins in skinsWithKey)
         {

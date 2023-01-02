@@ -1,14 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
-using TMPro;
-using UnityEngine;
-using Zenject;
-using UnityEngine.SceneManagement;
-using System.Linq;
-using System.Threading;
-using UnityEngine.AddressableAssets;
-using System.Text;
 using System;
+using UnityEngine;
+using UnityEngine.AddressableAssets;
 
 public class AppStartup : MonoBehaviour
 {
@@ -46,7 +38,7 @@ public class AppStartup : MonoBehaviour
         }
         catch (Exception)
         {
-            var level = new Level(1, levelProvider.GetRandomPlatformKey(), levelProvider.GetRandomColorPaletteKey());
+            var level = new Level(1, levelProvider.GetRandomColorPaletteKey(), levelProvider.GetRandomPlatformKey());
             level.LoadProperties();
             Level.InitSingleton(level);
             level.Save();

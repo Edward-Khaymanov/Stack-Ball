@@ -1,16 +1,14 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 [Serializable]
 public class Score
 {
-    [SerializeField] private int _currentScore;
     [SerializeField] private int _bestScore;
+    [SerializeField] private int _currentScore;
 
-    public int CurrentScore => _currentScore;
     public int BestScore => _bestScore;
+    public int CurrentScore => _currentScore;
 
     public void AddScorePoints(int amount)
     {

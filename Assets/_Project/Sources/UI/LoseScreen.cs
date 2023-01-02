@@ -1,16 +1,14 @@
 using System.Collections;
-using System.Collections.Generic;
-using System.Text.RegularExpressions;
 using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
 public class LoseScreen : Screen, IPointerDownHandler
 {
-    [SerializeField] private float _countDuration;
     [SerializeField] private AnimationCurve _countPattern;
-    [SerializeField] private TMP_Text _currentScore;
     [SerializeField] private TMP_Text _bestScore;
+    [SerializeField] private TMP_Text _currentScore;
+    [SerializeField] private float _countDuration;
 
     private IEnumerator _countCoroutine;
 

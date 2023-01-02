@@ -1,23 +1,18 @@
-using System.Collections;
+using System;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
-using System.Linq;
-using UnityEngine.ResourceManagement.ResourceLocations;
-using System;
-using System.Threading;
-using System.Threading.Tasks;
-using System.IO;
 using UnityEngine.ResourceManagement.AsyncOperations;
 
 public class LevelProvider : AssetLoader
 {
     private static LevelProvider _instance;
 
-    private IList<string> _platformsLocations;
-    private IList<string> _colorPalettesLocations;
-    private AsyncOperationHandle _cachedPlatfromHandle;
+    private readonly IList<string> _colorPalettesLocations;
+    private readonly IList<string> _platformsLocations;
     private AsyncOperationHandle _cachedColorPaletteHandle;
+    private AsyncOperationHandle _cachedPlatfromHandle;
 
 
     public LevelProvider(AssetLabelReference platformsLabel, AssetLabelReference colorPalettesLabel)

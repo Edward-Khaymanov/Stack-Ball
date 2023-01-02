@@ -1,16 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
-using System.IO;
-using System.Text;
-using UnityEditor;
 using UnityEngine;
-using UnityEngine.EventSystems;
 using Zenject;
 
 public class LevelEventHandler : MonoBehaviour
 {
     private Ball _ball;
-    private BallSkinProvider _ballSkinProvider;
     private CameraMover _camera;
     private Level _level;
     private LevelProgressBar _levelProgressBar;
@@ -25,18 +18,16 @@ public class LevelEventHandler : MonoBehaviour
 
     [Inject]
     private void Constructor(
-        Ball ball, 
-        BallSkinProvider ballSkinProvider,
-        CameraMover camera, 
-        LevelProgressBar levelProgressBar, 
-        LoseScreen loseScreen, 
+        Ball ball,
+        CameraMover camera,
+        LevelProgressBar levelProgressBar,
+        LoseScreen loseScreen,
         PlatformGenerator platformGenerator,
         SkyboxView skybox,
-        [Inject(Id = DIMarkers.SCORE_VIEW)] TextView scoreView, 
+        [Inject(Id = DIMarkers.SCORE_VIEW)] TextView scoreView,
         WinScreen winScreen)
     {
         _ball = ball;
-        _ballSkinProvider = ballSkinProvider;
         _camera = camera;
         _loseScreen = loseScreen;
         _platformGenerator = platformGenerator;
@@ -86,7 +77,7 @@ public class LevelEventHandler : MonoBehaviour
     private void OnLevelPassed()
     {
         _winScreen.Render(_level.Number);
-        _level = new Level(_level.Number + 1, _levelProvider.GetRandomPlatformKey(), _levelProvider.GetRandomColorPaletteKey());
+        _level = new Level(_level.Number + 1, _levelProvider.GetRandomColorPaletteKey(), _levelProvider.GetRandomPlatformKey());
         _level.LoadProperties();
         _level.Save();
         _player.Save();
@@ -120,7 +111,7 @@ public class LevelEventHandler : MonoBehaviour
     {
         _levelProgressBar.Fill(_platformGenerator.PlatformsCount);
     }
-    
+
     private void UpdatePlayerData()
     {
         _ball.UpdateView(_player.ChoicedSkin, _level.ColorPalette.Main);

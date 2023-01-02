@@ -1,8 +1,6 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
 using UnityEngine.ResourceManagement.AsyncOperations;
@@ -13,7 +11,7 @@ public class BallSkinProvider : AssetLoader
     private AsyncOperationHandle _cachedHandle;
 
     public IList<IResourceLocation> GetLocationsByLabel(AssetLabelReference ballsLabel)
-    { 
+    {
         return GetLocationsByLabelInternal<BallSkin>(ballsLabel).Result;
     }
 

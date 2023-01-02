@@ -1,13 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using System.Linq;
 
 public class Platform : MonoBehaviour
 {
+    [SerializeField] private float DestroyDuration = 1f;
     [SerializeField] private float ThrowPointOffsetX = 8;
     [SerializeField] private float ThrowPointOffsetY = 13;
-    [SerializeField] private float Destroy_duration = 1f;
 
     private const string COLOR_PROPERTY = "_Color";
 
@@ -53,8 +52,8 @@ public class Platform : MonoBehaviour
 
     private IEnumerator DestroyPart(Transform partTransform, Vector3 throwDirection)
     {
-        StartCoroutine(partTransform.Move(throwDirection, Destroy_duration));
-        yield return partTransform.RotateExt(Random.rotation.eulerAngles, Destroy_duration);
+        StartCoroutine(partTransform.Move(throwDirection, DestroyDuration));
+        yield return partTransform.RotateExt(Random.rotation.eulerAngles, DestroyDuration);
         Destroy(partTransform.gameObject);
     }
 

@@ -1,23 +1,21 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
-using UnityEngine.AddressableAssets;
 
 [Serializable]
 public class Player
 {
-    [SerializeField] private string _choicedSkinKey;
     [SerializeField] private Score _score;
+    [SerializeField] private string _choicedSkinKey;
 
     private static Player _instance;
+
     private BallSkin _choicedSkin;
 
     public Player(string skinKey)
     {
-        _choicedSkinKey = skinKey;
         _score = new Score();
+        _choicedSkinKey = skinKey;
     }
 
     public static Player Current => _instance;
@@ -58,7 +56,7 @@ public class Player
 
         _choicedSkinKey = skinKey;
         _choicedSkin = skin;
-        
+
         Save();
     }
 

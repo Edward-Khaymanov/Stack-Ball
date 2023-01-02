@@ -1,19 +1,16 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using Zenject;
 
 public class BallCollisionHandler : MonoBehaviour
 {
-    private BallInput _input;
     private BallInvincibility _invincibility;
+    private Input _input;
     private Rigidbody _body;
     private int _lastCollisionFrameIndex = -1;
 
     public event Action<Vector3, Transform> Bouncing;
 
-    public void Init(BallInput input, BallInvincibility invincibility, Rigidbody body)
+    public void Init(Input input, BallInvincibility invincibility, Rigidbody body)
     {
         _input = input;
         _invincibility = invincibility;

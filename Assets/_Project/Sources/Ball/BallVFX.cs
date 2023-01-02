@@ -1,13 +1,11 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class BallVFX : MonoBehaviour
 {
+    [SerializeField] private Footprint _footprint;
     [SerializeField] private ParticleSystem _fire;
     [SerializeField] private ParticleSystem _invincibilityActivation;
     [SerializeField] private TrailRenderer _trail;
-    [SerializeField] private Footprint _footprint;
 
     public void RenderTrail(BallSkin skin, Color32 color)
     {

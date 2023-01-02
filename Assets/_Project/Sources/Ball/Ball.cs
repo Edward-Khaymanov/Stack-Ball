@@ -18,7 +18,7 @@ public class Ball : MonoBehaviour
 
     private BallAnimator _animator;
     private BallCollisionHandler _collisionHandler;
-    private BallInput _input;
+    private Input _input;
     private BallInvincibility _invincibility;
     private BallMover _mover;
     private SphereCollider _collider;
@@ -27,7 +27,7 @@ public class Ball : MonoBehaviour
     public bool IsInvincible => _invincibility.IsInvincible;
 
     [Inject]
-    private void Constructor(BallInput input, [Inject(Id = DIMarkers.BALL_START_POINT)] Transform startPoint)
+    private void Constructor(Input input, [Inject(Id = DIMarkers.BALL_START_POINT)] Transform startPoint)
     {
         _input = input;
         _startPoint = startPoint;
