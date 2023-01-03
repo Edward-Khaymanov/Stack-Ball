@@ -12,9 +12,11 @@ Navigation:
 [How to add more skins?](#how-to-add-more-skins)
 
 ## Preview
-<img src ="https://user-images.githubusercontent.com/104985307/210295097-39c69efd-08e2-4818-82e1-ca84da97b744.gif" height="400">
 
-
+<p align="center">
+	<img src ="https://user-images.githubusercontent.com/104985307/210295097-39c69efd-08e2-4818-82e1-ca84da97b744.gif" height="500">
+	<img src ="https://user-images.githubusercontent.com/104985307/210384086-6be4f65d-4e09-4183-8fa8-11f0670a3af8.gif" height="500">
+</p>
 
 <details>
 <summary><h2>How to add more skins?<h2></summary>
