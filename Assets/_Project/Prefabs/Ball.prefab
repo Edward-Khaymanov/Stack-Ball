@@ -9928,10 +9928,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e279c49e2be830643b3120bb903ede43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _footprint: {fileID: 1534756316}
   _fire: {fileID: 1529628690}
   _invincibilityActivation: {fileID: 15104507}
   _trail: {fileID: 4098036853255357980}
-  _footprint: {fileID: 1534756316}
 --- !u!1 &4098036852782089964
 GameObject:
   m_ObjectHideFlags: 0
@@ -10055,6 +10055,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eabdd9f89b3c6d6458ca174da6a5edf0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _secondsPerPlatform: 0.15
+  _invincibleSeconds: 3
+  _platformsToEnableIndicator: 10
+  _secondsToEnableInvincible: 4
 --- !u!1 &4098036853255357982
 GameObject:
   m_ObjectHideFlags: 0
@@ -10257,8 +10261,7 @@ MeshRenderer:
   m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 1472a8189108e5a409c53cc8a80257ff, type: 2}
+  m_Materials: []
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
