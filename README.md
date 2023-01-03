@@ -16,6 +16,7 @@ ___
 **Navigation**:
 - [Preview](#preview)
 - [How to add more skins?](#how-to-add-more-skins)
+- [How to add more color templates?](how-to-add-more-color-templates)
 
 ## Preview
 
