@@ -21,7 +21,7 @@ Navigation:
  
 ### STEP 1. Create material for your skin
 
-:warning: SKIP THIS STEP AND PICK DEFAULTBALLSKIN IN NEXT STEP
+:warning: YOU CAN SKIP THIS STEP AND PICK "DefaultBallSkin" IN NEXT STEP
 
 1. Go to "\_Project\Materials\Skins\"
 2. Create a new material and select "Custom/BallSkin" shader
