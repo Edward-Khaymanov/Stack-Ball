@@ -3,6 +3,12 @@
 
 Clone of the [Stack Ball](https://play.google.com/store/apps/details?id=com.azurgames.stackball) game
 
+Used plugins:
+- [Vibration](https://github.com/BenoitFreslon/Vibration)
+- [Extenject](https://github.com/Mathijs-Bakker/Extenject)
+
+Navigation:
+
 [How to add more skins?](#how-to-add-more-skins)
 
 ## Preview
