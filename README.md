@@ -17,15 +17,15 @@ Clone of the [Stack Ball](https://play.google.com/store/apps/details?id=com.azur
 
 :warning: SKIP THIS STEP AND PICK DEFAULTBALLSKIN IN NEXT STEP
 
-1. Go to \_Project\Materials\Skins\
-2. Create a new material and select Custom/BallSkin shader
+1. Go to "\_Project\Materials\Skins\"
+2. Create a new material and select "Custom/BallSkin" shader
 3. Customize your material
 
 ![CreateMaterial](https://user-images.githubusercontent.com/104985307/210307277-4c48f4bb-465c-4e16-abaa-00ab94404b31.gif)
 
 ### STEP 2. CREATE AND SETUP SKIN
 
-1. Go to \_Project\Templates\Ball Skins\
+1. Go to "\_Project\Templates\Ball Skins\"
 2. Right click => Create => Ball Skin
 3. Сustomize your skin
 	- Skin - pick mesh for your skin
