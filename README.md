@@ -17,6 +17,7 @@ ___
 - [Preview](#preview)
 - [How to add more skins?](#how-to-add-more-skins)
 - [How to add more color templates?](#how-to-add-more-color-templates)
+- [How to add more platform templates?](#how-to-add-more-platform-templates)
 
 ## Preview
 
@@ -30,7 +31,7 @@ ___
  
 ### STEP 1. Create material for your skin
 
-:warning: YOU CAN SKIP THIS STEP AND PICK `DefaultBallSkin` IN NEXT STEP
+:warning: **YOU CAN SKIP THIS STEP AND PICK `DefaultBallSkin` IN NEXT STEP**
 
 1. Go to `\_Project\Materials\Skins\`
 2. Create a new material and select `Custom/BallSkin` shader
@@ -85,7 +86,20 @@ ___
 
 </details>
 
-	
+<details>
+<summary><h2>How to add more platform templates?<h2></summary>
+
+:warning: **New platforms should have the same structure as this one:**
+
+![PlatformStructure](https://user-images.githubusercontent.com/104985307/210448501-350f8a9c-28f9-40e2-b7f0-8bd12f2e0499.png)
+
+1. Add your model to `_Project\Models` folder.
+2. Drag your model in scene. Then work with this prefab.
+3. Add to all child objects collider component and set `Is Trigger` enabled. If it is a `Mesh collider`, then set `Convex` enabled.
+4. To parent object attach `Platform` script. It is located in `_Project\Sources\Platform` folder.
+5. Drag your prefab from scene to `_Project\Templates\Platforms` folder in project browser.
+6. Set Addresable checkbox enabled. Сonfigure to use Addresables as in [step 3 of adding the skin](#step-3-setup-addresables)
+</details>
 	
 	
 	
