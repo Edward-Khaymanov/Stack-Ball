@@ -1,15 +1,21 @@
 # Stack Ball
 [![Build project](https://github.com/Edward-Khaymanov/Stack-Ball/actions/workflows/main.yml/badge.svg)](https://github.com/Edward-Khaymanov/Stack-Ball/actions/workflows/main.yml)
+___
+
 
 Clone of the [Stack Ball](https://play.google.com/store/apps/details?id=com.azurgames.stackball) game
 
-Used plugins:
+___
+**Unity version**: `2021.3.6f1`
+
+**Used plugins**:
 - [Vibration](https://github.com/BenoitFreslon/Vibration)
 - [Extenject](https://github.com/Mathijs-Bakker/Extenject)
+___
 
-Navigation:
-
-[How to add more skins?](#how-to-add-more-skins)
+**Navigation**:
+- [Preview](#preview)
+- [How to add more skins?](#how-to-add-more-skins)
 
 ## Preview
 
