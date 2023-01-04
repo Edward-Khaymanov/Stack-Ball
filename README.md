@@ -15,6 +15,7 @@ ___
 
 **Navigation**:
 - [Preview](#preview)
+- [Shortcomings and unrealized things](#x-shortcomings-and-unrealized-things)
 - [How to add more skins?](#how-to-add-more-skins)
 - [How to add more color templates?](#how-to-add-more-color-templates)
 - [How to add more platform templates?](#how-to-add-more-platform-templates)
@@ -25,6 +26,15 @@ ___
 	<img src ="https://user-images.githubusercontent.com/104985307/210295097-39c69efd-08e2-4818-82e1-ca84da97b744.gif" height="500">
 	<img src ="https://user-images.githubusercontent.com/104985307/210384086-6be4f65d-4e09-4183-8fa8-11f0670a3af8.gif" height="500">
 </p>
+
+## :x: Shortcomings and unrealized things
+
+- The collision point is calculated ambiguously. Because of this, footprints do not remain at every jump.
+- Footprints are not removed from the last platform after the restart.
+- No achievement system to unlock skins.
+- No animation of the destruction of the ball when losing.
+- No animation of the expansion and compression of the platform next, after the end of the movement.
+- "Touch to restart" does not pulse on the lose screen.
 
 <details>
 <summary><h2>How to add more skins?<h2></summary>
